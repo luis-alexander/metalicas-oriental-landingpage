@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "title": "Puerta de Calle",
+            "description": "Nuestra puerta de calle modelo clásico está diseñada con materiales de alta resistencia y detalles ornamentales que realzan la entrada de su hogar. Fabricada en hierro forjado con acabados de primera calidad, ofrece seguridad y elegancia. Ideal para viviendas que buscan un toque tradicional sin sacrificar la protección. Disponible en varios colores y medidas para adaptarse a cualquier fachada.",
+            "image": "../../src/assets/img/puertas/puerta.png",
+            "ubicacion": "Quito, Ecuador"
+        },
+        {
+            "title": "Lanford Blanca",
+            "description": "El modelo Lanford Blanca representa la evolución en puertas de garaje con su diseño minimalista y funcional. Sus paneles horizontales ofrecen un acabado moderno que combina perfectamente con arquitecturas contemporáneas. Fabricada con aluminio reforzado, proporciona ligereza y durabilidad, además de un excelente aislamiento térmico. Incluye sistema de apertura silenciosa y opciones de automatización.",
+            "image": "../../src/assets/img/lanfords/lanford-blanca.jpg",
+            "ubicacion": "Machachí, Ecuador"
+        },
+        {
+            "title": "Lanfords y Ventanas",
+            "description": "Nuestro sistema integrado Lanfords y Ventanas combina funcionalidad y estética para espacios residenciales y comerciales. El portón seccional con acabado metálico se adapta a diferentes dimensiones de apertura, mientras su diseño robusto garantiza máxima seguridad. Ideal para garajes amplios, incluye sistema de apertura motorizada y opción de panel con ventanas para mayor luminosidad.",
+            "image": "../../src/assets/img/lanfords/lanford-ventanas.jpg",
+            "ubicacion": "Sigchos, Ecuador"
+        },
+        {
+            "title": "Lanford 1",
+            "description": "El modelo Lanford 1 destaca por su diseño minimalista y líneas limpias, perfecto para arquitecturas modernas. Este panel de muro cortina ofrece una solución elegante que combina seguridad y estética. Fabricado con materiales de alta resistencia a la intemperie, proporciona un excelente aislamiento térmico y acústico. Su instalación es versátil, adaptándose tanto a nuevas construcciones como a renovaciones de espacios existentes.",
+            "image": "../../src/assets/img/portones/porton-plomo.jpg",
+            "ubicacion": "Quito, Ecuador"
+        }
+    ]
+} 

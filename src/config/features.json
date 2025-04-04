@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Puerta Principal",
+        "description": "Puerta de entrada principal a la vivienda con diseño moderno.",
+        "tipo": "Puertas",
+        "imagen": "/img/puertas/puerta1.jpg"
+    },
+    {
+        "title": "Puerta de Patio",
+        "description": "Puerta resistente para acceso al patio o jardín.",
+        "tipo": "Puertas",
+        "imagen": "/img/puertas/puerta2.jpg"
+    },
+    {
+        "title": "Portón Automático",
+        "description": "Portón automático para entrada de vehículos con control remoto.",
+        "tipo": "Portones",
+        "imagen": "/img/portones/porton1.jpg"
+    },
+    {
+        "title": "Portón Residencial",
+        "description": "Portón de diseño elegante para residencias privadas.",
+        "tipo": "Portones",
+        "imagen": "/img/portones/porton2.jpg"
+    },
+    {
+        "title": "Lanford Estándar",
+        "description": "Modelo estándar de la línea Lanford con acabado premium.",
+        "tipo": "Lanford",
+        "imagen": "/img/lanford/lanford1.jpg"
+    }
+]

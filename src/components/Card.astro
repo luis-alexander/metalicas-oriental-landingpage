@@ -1,0 +1,16 @@
+---
+//Datos para cada componente 
+interface Props{
+    image?: string;
+    content?: string;
+}
+
+//Extraemos el dato title y content de la respuesta y si no ahy, que muestre por defecto los valores 
+const {image, content = "Contenido_por_defecto"} = Astro.props 
+---
+
+<div class="text-white rounded-lg flex flex-col items-center">
+    <img src={image} alt="" class="pb-2 drop-shadow-[2px_2px_4px_red] w-20" />
+    <p class="bg-red-900 rounded-2xl p-2 text-center hover:to-red-700 transition-all duration-300 ease-in-out transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1">{content}</p>
+</div>
+

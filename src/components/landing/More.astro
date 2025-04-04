@@ -1,0 +1,22 @@
+---
+import Card from "../Card.astro";
+import Puerta from "../../../public/images/puerta.jpg";
+import Lanfor from "../../../public/images/lanfor.jpg";
+import Andamio from "../../../public/images/andamio.avif";
+import Porton from "../../../public/images/porton.jpg";
+---
+
+<section class="flex flex-col py-10 md:flex-row md:p-20 gapy-10">
+    <div class="flex-1 grid grid-cols-2 gap-4">
+        <Card image={Puerta.src} content="Puertas"/>
+        <Card image={Porton.src} content="Portones"/>
+        <Card image={Lanfor.src} content="Lanfor"/>
+        <Card image={Andamio.src} content="Andamios"/>
+
+        
+    </div>
+    <div class="flex flex-1 flex-col gap-y-10 text-center pt-5">
+        <h2 class="text-5xl md:text-6xl font-bold">Nuestros Servicios</h2>
+        <p class="text-3xl text-zinc-300">Tenemos varios productos que ofrecemos a nuestros clientes</p>
+    </div>
+</section>

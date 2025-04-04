@@ -1,0 +1,96 @@
+---
+import features from '../../config/features.json';
+---
+
+<h1 class="text-center font-bold text-5xl mt-10">Modelos Disponibles</h1>
+
+<div class="flex justify-center gap-4 mt-10 mb-10">
+    <button id="btn-todos" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900 active">Todos</button>
+    <button id="btn-puertas" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900">Puertas</button>
+    <button id="btn-portones" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900">Portones</button>
+    <button id="btn-lanford" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900">Lanford</button>
+</div>
+<p class="text-center">Si quieres más información, te puedes contactar con nosotros para revisar más modelos</p>
+<div id="modelos-container" class="grid md:grid-cols-3 gap-4 p-4">
+    {
+        features.map((feature) => (
+            <div class="modelo-item bg-slate-800 p-4 rounded-xl" data-tipo={feature.tipo}>
+                {feature.imagen && (
+                    <div class="mb-4 overflow-hidden rounded-lg h-64">
+                        <img src={feature.imagen} alt={feature.title} class="w-full h-full object-cover" />
+                    </div>
+                )}
+                <h2 class="text-2xl font-bold my-4">{feature.title}</h2>
+                <p>{feature.description}</p>
+            </div>
+        ))
+    }
+</div>
+
+<script>
+    // Obtener referencias a los botones y elementos
+    const btnTodos = document.getElementById('btn-todos');
+    const btnPuertas = document.getElementById('btn-puertas');
+    const btnPortones = document.getElementById('btn-portones');
+    const btnLanford = document.getElementById('btn-lanford');
+    const modeloItems = document.querySelectorAll('.modelo-item');
+    
+    // Función para resaltar el botón activo
+    function setActiveButton(activeBtn) {
+        // Eliminar la clase 'active' de todos los botones
+        [btnTodos, btnPuertas, btnPortones, btnLanford].forEach(btn => {
+            btn.classList.remove('bg-red-900');
+        });
+        
+        // Añadir la clase 'active' al botón seleccionado
+        activeBtn.classList.add('bg-red-900');
+    }
+    
+    // Función para filtrar los elementos
+    function filtrarElementos(tipo) {
+        modeloItems.forEach(item => {
+            if (tipo === 'Todos' || item.dataset.tipo === tipo) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    // Configurar los event listeners
+    btnTodos.addEventListener('click', () => {
+        filtrarElementos('Todos');
+        setActiveButton(btnTodos);
+    });
+    
+    btnPuertas.addEventListener('click', () => {
+        filtrarElementos('Puertas');
+        setActiveButton(btnPuertas);
+    });
+    
+    btnPortones.addEventListener('click', () => {
+        filtrarElementos('Portones');
+        setActiveButton(btnPortones);
+    });
+    
+    btnLanford.addEventListener('click', () => {
+        filtrarElementos('Lanford');
+        setActiveButton(btnLanford);
+    });
+    
+    // Inicializar mostrando todos los elementos
+    filtrarElementos('Todos');
+    setActiveButton(btnTodos);
+</script>
+
+<style>
+    /* Estilos adicionales para mejorar la apariencia */
+    .active {
+        background-color: rgb(127, 29, 29);
+    }
+    
+    /* Añadir una transición suave al filtrar */
+    .modelo-item {
+        transition: all 0.3s ease;
+    }
+</style>
