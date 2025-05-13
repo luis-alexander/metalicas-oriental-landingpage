@@ -3,13 +3,13 @@
         "title": "Puerta Principal",
         "description": "Puerta de entrada principal a la vivienda con diseño moderno.",
         "tipo": "Puertas",
-        "imagen": "/img/puertas/puerta1.jpg"
+        "imagen": "/img/puertas/puerta-vino.jpg"
     },
     {
         "title": "Puerta de Patio",
         "description": "Puerta resistente para acceso al patio o jardín.",
         "tipo": "Puertas",
-        "imagen": "/img/puertas/puerta2.jpg"
+        "imagen": "/img/puertas/puerta-calle-gris.jpg"
     },
     {
         "title": "Portón Automático",
@@ -34,5 +34,23 @@
         "description": "Lanford con puerta peatonal color blanco",
         "tipo": "Lanford",
         "imagen": "/img/lanfords/lanford-blanca.jpg"
+    },
+    {
+        "title": "Lanford Nranaja",
+        "description": "Lanford con ventanilla naranja",
+        "tipo": "Lanford",
+        "imagen": "/img/lanfords/lanford-naranja.jpg"
+    },
+    {
+        "title": "Porton alto gris",
+        "description": "Porton gris con acabados rectangulares",
+        "tipo": "Portones",
+        "imagen": "/img/portones/porton-alto.jpg"
+    },
+    {
+        "title": "Porton negro con rayas gris",
+        "description": "Porton negro con rayas gris",
+        "tipo": "Portones",
+        "imagen": "/img/portones/porton-negro.jpg"
     }
 ]
