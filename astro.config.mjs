@@ -5,6 +5,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind()],
-    site: 'https://ALEXITOSOTO.github.io',
-    base: 'metalicas-oriental-landingpage',
+    output: 'static', 
 });
