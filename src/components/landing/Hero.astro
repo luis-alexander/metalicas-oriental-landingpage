@@ -1,12 +1,13 @@
 ---
 import Boton from "../Boton.astro";
+import videoPrincipal from '../assets/img/video_principal.gif';
 ---
 
 <header class="relative overflow-hidden rounded-xl h-full content-center">
   <!-- Fondo con GIF -->
   <div 
     class="absolute inset-0 -z-10 bg-cover bg-center opacity-30" 
-    style="background-image: url('../../../src/assets/img/video_principal.gif');"
+    style={`background-image: url(${videoPrincipal})`}
   ></div>
 
   <!-- Contenido principal -->
