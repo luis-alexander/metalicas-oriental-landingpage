@@ -7,10 +7,12 @@ import More from "../components/landing/More.astro";
 import Features from "../components/landing/Features.astro";
 import Projects from "../components/landing/Projects.astro";
 import About from "../components/landing/About.astro";
+import Footer from "../components/Footer.astro";
+import Contactos from "../components/landing/Contactos.astro";
 ---
 
 <Layout title="Página Oficial">
-	<Hero />
+	
 	<!-- Secciones con IDs correspondientes -->
 	<section id="servicios">
 		<More />
@@ -23,5 +25,8 @@ import About from "../components/landing/About.astro";
 	</section>
 	<section id="project">
 		<Projects />
+	</section>
+	<section id="contactos">
+		<Contactos />
 	</section>
 </Layout>

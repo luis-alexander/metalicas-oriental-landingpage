@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import Hero from '../components/landing/Hero.astro';
 
 interface Props{
 	title?: string;
@@ -22,10 +23,11 @@ const { title } = Astro.props;
 		<title>Metalicas Oriental - {title}</title>
 	</head>
 	<body>
+		<Hero />
 		<main class="mx-auto container md:pt-10 ">
 			<slot />
-			<Footer />
 		</main>
+		<Footer />
 
 	</body>
 </html>

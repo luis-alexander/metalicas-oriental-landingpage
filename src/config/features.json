@@ -15,18 +15,24 @@
         "title": "Portón Automático",
         "description": "Portón automático para entrada de vehículos con control remoto.",
         "tipo": "Portones",
-        "imagen": "/img/portones/porton1.jpg"
+        "imagen": "../../src/assets/img/portones/video_porton_auto.gif"
     },
     {
         "title": "Portón Residencial",
         "description": "Portón de diseño elegante para residencias privadas.",
         "tipo": "Portones",
-        "imagen": "/img/portones/porton2.jpg"
+        "imagen": "../../src/assets/img/portones/porton_residencial.jpg"
     },
     {
         "title": "Lanford Estándar",
-        "description": "Modelo estándar de la línea Lanford con acabado premium.",
+        "description": "Modelo estándar de la línea Lanford.",
         "tipo": "Lanford",
-        "imagen": "/img/lanford/lanford1.jpg"
+        "imagen": "../../src/assets/img/lanfords/foto-2.jpg"
+    },
+    {
+        "title": "Lanford + puerta peatonal",
+        "description": "Lanford con puerta peatonal color blanco",
+        "tipo": "Lanford",
+        "imagen": "../../src/assets/img/lanfords/lanford-blanca.jpg"
     }
 ]
