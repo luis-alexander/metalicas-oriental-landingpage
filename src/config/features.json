@@ -42,6 +42,12 @@
         "imagen": "/img/lanfords/lanford-naranja.jpg"
     },
     {
+        "title": "Lanfords Puertas y Ventanas",
+        "description": "Lanford color gris elegante",
+        "tipo": "Lanford",
+        "imagen": "/img/lanfords/lanford-gris-elegante.jpg"
+    },
+    {
         "title": "Porton alto gris",
         "description": "Porton gris con acabados rectangulares",
         "tipo": "Portones",
