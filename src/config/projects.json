@@ -23,6 +23,18 @@
             "description": "El porton presentado destaca por su diseño minimalista y líneas limpias, perfecto para arquitecturas modernas. Este panel de muro cortina ofrece una solución elegante que combina seguridad y estética. Fabricado con materiales de alta resistencia a la intemperie, proporciona un excelente aislamiento térmico y acústico. Su instalación es versátil, adaptándose tanto a nuevas construcciones como a renovaciones de espacios existentes.",
             "image": "/img/portones/porton-plomo.jpg",
             "ubicacion": "Quito, Ecuador"
+        },
+        {
+            "title": "Vista Frontal de Locales Comerciales con Cerramientos Metálicos Instalados",
+            "description": "Se observa la vista frontal de la estructura comercial, donde se ha realizado la instalación de cerramientos metálicos enrollables en los locales de la planta baja. Los trabajos presentan un acabado uniforme y una integración adecuada con la estructura existente, proporcionando mayor seguridad, control de acceso y protección para las áreas comerciales.",
+            "image": "/img/lanfords/lanford-RD1.jpeg",
+            "ubicacion": "Quito, Ecuador"
+        },
+        {
+            "title": "Vista Lateral de la Instalación de Puertas Enrollables Metálicas",
+            "description": "La imagen muestra una perspectiva lateral de los locales comerciales equipados con puertas enrollables metálicas. Se aprecia la continuidad de la instalación y la correcta alineación de los elementos estructurales, evidenciando el avance de los trabajos y la mejora en las condiciones de seguridad y funcionalidad de los espacios destinados a actividades comerciales.",
+            "image": "/img/lanfords/lanford-RD.jpeg",
+            "ubicacion": "Quito, Ecuador"
         }
     ]
 } 

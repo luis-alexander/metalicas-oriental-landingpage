@@ -58,5 +58,12 @@
         "description": "Porton negro con rayas gris",
         "tipo": "Portones",
         "imagen": "/img/portones/porton-negro.jpg"
+    },
+    {
+        "title": "Vista Frontal de Locales Comerciales",
+        "description": "Lanford color gris",
+        "tipo": "Lanford",
+        "imagen": "/img/lanfords/lanford-RD1.jpeg" 
     }
+
 ]
