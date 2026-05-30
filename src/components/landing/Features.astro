@@ -2,7 +2,7 @@
 import features from '../../config/features.json';
 ---
 
-<h1 class="text-center font-bold text-5xl mt-10">Modelos Disponibles</h1>
+<h1 data-aos="fade-down" class="text-center font-bold text-5xl mt-10">Modelos Disponibles</h1>
 
 <div class="flex flex-col md:flex-row justify-center gap-4 mt-10 mb-10">
     <button id="btn-todos" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900 active">Todos</button>
@@ -11,7 +11,7 @@ import features from '../../config/features.json';
     <button id="btn-lanford" class="border border-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-900">Lanford</button>
 </div>
 <p class="text-center">Si quieres más información, te puedes contactar con nosotros para revisar más modelos</p>
-<div id="modelos-container" class="grid md:grid-cols-3 gap-4 p-4">
+<div data-aos="zoom-in-up" id="modelos-container" class="grid md:grid-cols-3 gap-4 p-4">
     {
         features.map((feature) => (
             <div class="modelo-item bg-slate-800 p-4 rounded-xl" data-tipo={feature.tipo}>
