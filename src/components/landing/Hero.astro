@@ -2,23 +2,24 @@
 import Boton from "../Boton.astro";
 ---
 
-<header class="relative overflow-hidden rounded-xl md:h-full content-center">
-  <!-- Fondo con GIF -->
+<header class="relative overflow-hidden rounded-xl min-h-screen flex items-center">
   <div 
     class="absolute inset-0 -z-10 bg-cover bg-center opacity-30"
     style="background-image: url('/img/video_principal.gif')">
   </div>
 
-  <!-- Contenido principal -->
-  <div class="bg-zinc-700/20 flex flex-col md:flex-row p-20 gap-10 text-center md:text-left rounded-xl">
-    <div data-aos="fade-right">
-        <h1 class=" text-5xl md:text-6xl font-bold text-red-500 pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
-            Metálicas Oriental
-          </h1>
-      <p class="my-4 text-1xl md:text-2xl text-justify md:text-justify text-white pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
+  <div class="bg-zinc-700/20 w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16 gap-10 text-center md:text-left rounded-xl">
+    
+    <div data-aos="fade-right" class="w-full md:w-1/2">
+      <h1 class="text-4xl md:text-6xl font-bold text-red-500 pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
+        Metálicas Oriental
+      </h1>
+
+      <p class="my-4 text-lg md:text-2xl text-justify text-white pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
         Somos una empresa dedicada a la fabricación de puertas de Acero, alquilamos andamios e instalamos diferentes tipos de productos. Bienvenido/a a nuestra página web, donde podrás encontrar todo lo que necesitas para tus proyectos.
       </p>
-      <div class="flex flex-col justify-center md:flex-row md:justify-center gap-4">
+
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
         <Boton title="Servicios" link="#servicios"/>
         <Boton title="Modelos" link="#modelos"/>
         <Boton title="Nosotros" link="#about"/>
@@ -26,14 +27,14 @@ import Boton from "../Boton.astro";
         <Boton title="Contactos" link="#contactos"/>
       </div>
     </div>
-    <div data-aos="fade-left" class="flex flex-col md:flex-row w-full items-center justify-center">
+
+    <div data-aos="fade-left" class="w-full md:w-1/2 flex items-center justify-center">
       <img 
         src="/images/logo-metalicas-oriental-icono.jpg" 
         alt="Icono" 
-        class="w-80 rounded-3xl p-1 bg-gradient-to-r from-red-500 via-yellow-500 to-red-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1"
+        class="w-64 md:w-80 max-w-full rounded-3xl p-1 bg-gradient-to-r from-red-500 via-yellow-500 to-red-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1"
       />
     </div>
-    
 
   </div>
 </header>

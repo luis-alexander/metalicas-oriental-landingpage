@@ -27,22 +27,13 @@ const { title } = Astro.props;
 		<title>Metalicas Oriental - {title}</title>
 	</head>
 	<body>
-		<Hero />
-		<WhatsAppButton/>
-		<main class="mx-auto container md:pt-10 ">
+		<main class="mx-auto container px-6 md:pt-10 overflow-hidden">
+			<Hero />
 			<slot />
 		</main>
+		<WhatsAppButton />
 		<Footer />
-
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
