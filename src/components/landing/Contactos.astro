@@ -1,42 +1,53 @@
-<section class="bg-[#1e1e1e] py-16 text-white">
-    <div class="container mx-auto px-6">
-        <h2 data-aos="fade-down" class="text-4xl font-bold text-center text-white mb-12">Contáctanos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Correo -->
-            <div data-aos="fade-right" class="bg-[#2b2b2b] border border-red-500 rounded-2xl p-6 text-center hover:shadow-red-500/40 hover:shadow-xl transition-shadow">
-            <div class="text-red-500 text-4xl mb-4">
-                <i class="fa-solid fa-envelope"></i>
+---
+const canales = [
+    { icon: "fa-solid fa-envelope", label: "Correo", value: "metalicasoriental2015@gmail.com", href: "mailto:metalicasoriental2015@gmail.com" },
+    { icon: "fa-solid fa-phone", label: "Teléfono", value: "02 3074516", href: "tel:+59323074516" },
+    { icon: "fa-brands fa-whatsapp", label: "Celular / WhatsApp", value: "099 162 1748", href: "https://wa.me/593991621748" },
+];
+---
+
+<div class="bg-ink-950 py-24 md:py-32">
+    <div class="mx-auto max-w-7xl px-6">
+        <div data-aos="fade-up" class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand to-brand-dark p-6 sm:p-10 md:p-16">
+            <div class="absolute inset-0 bg-grid opacity-60"></div>
+            <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
+
+            <div class="relative grid lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Contacto</p>
+                    <h2 class="font-display uppercase text-4xl md:text-6xl font-bold text-white mt-4 leading-none">¿Listo para su próximo proyecto?</h2>
+                    <p class="text-white/85 text-lg mt-6">Cuéntenos qué necesita y le enviaremos una cotización sin compromiso.</p>
+                    <a
+                    href="https://wa.me/593991621748"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-8 inline-flex items-center gap-3 rounded-lg bg-white px-7 py-4 font-semibold text-red-600 shadow-lg transition hover:bg-black hover:text-white"
+                    >
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    Escribir por WhatsApp
+                    </a>
+                </div>
+
+                <div class="lg:col-span-3 grid gap-4 min-w-0">
+                {canales.map((canal) => (
+                    <a
+                    href={canal.href}
+                    target={canal.href.startsWith("http") ? "_blank" : undefined}
+                    rel={canal.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    class="group flex items-center gap-4 sm:gap-5 rounded-lg border-l-4 border-red-600 bg-black p-5 transition hover:bg-zinc-900"
+                    >
+                    <span class="w-12 h-12 shrink-0 rounded-md bg-red-600 text-white flex items-center justify-center text-lg transition group-hover:bg-white group-hover:text-red-600">
+                        <i class={canal.icon}></i>
+                    </span>
+                    <span class="min-w-0">
+                        <span class="block text-xs uppercase tracking-widest text-zinc-400">{canal.label}</span>
+                        <span class="block text-white font-semibold text-base sm:text-lg truncate">{canal.value}</span>
+                    </span>
+                    <i class="fa-solid fa-arrow-right ml-auto text-zinc-400 transition group-hover:text-white group-hover:translate-x-1"></i>
+                    </a>
+                ))}
+                </div>
             </div>
-            <h3 class="text-2xl font-semibold mb-2">Correo</h3>
-            <p class="text-gray-300">metalicasoriental2015@gmail.com</p>
-            </div>
-    
-            <!-- Teléfono fijo -->
-            <div data-aos="fade-up" class="bg-[#2b2b2b] border border-red-500 rounded-2xl p-6 text-center hover:shadow-red-500/40 hover:shadow-xl transition-shadow">
-            <div class="text-red-500 text-4xl mb-4">
-                <i class="fa-solid fa-phone"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mb-2">Teléfono</h3>
-            <p class="text-gray-300">02 3074516</p>
-            </div>
-    
-            <!-- Celular -->
-            <div data-aos="fade-left" class="bg-[#2b2b2b] border border-red-500 rounded-2xl p-6 text-center hover:shadow-red-500/40 hover:shadow-xl transition-shadow">
-            <div class="text-red-500 text-4xl mb-4">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-            </div>
-            <h3 class="text-2xl font-semibold mb-2">Celular</h3>
-            <p class="text-gray-300">0991621748</p>
-            </div>
-        </div>
-    
-        <!-- Desarrollador -->
-        <div class="mt-12 text-center">
-            <h3 class="text-lg text-gray-400 font-medium mb-2">Sitio desarrollado por:</h3>
-            <a href="https://www.linkedin.com/in/luis-alexander-soto-segovia-548322307/" 
-                class="inline-flex items-center gap-2 text-red-500 font-semibold hover:underline">
-                <i class="fa-solid fa-laptop-code"></i> Alexander
-            </a>
         </div>
     </div>
-</section>
+</div>

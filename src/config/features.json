@@ -15,7 +15,7 @@
         "title": "Portón Automático",
         "description": "Portón automático para entrada de vehículos con control remoto.",
         "tipo": "Portones",
-        "imagen": "/img/portones/video_porton_auto.gif"
+        "imagen": "/videos/porton-automatico.mp4"
     },
     {
         "title": "Portón Residencial",
@@ -36,7 +36,7 @@
         "imagen": "/img/lanfords/lanford-blanca.jpg"
     },
     {
-        "title": "Lanford Nranaja",
+        "title": "Lanford Naranja",
         "description": "Lanford con ventanilla naranja",
         "tipo": "Lanford",
         "imagen": "/img/lanfords/lanford-naranja.jpg"

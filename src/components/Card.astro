@@ -1,16 +1,24 @@
 ---
-//Datos para cada componente 
+//Datos para cada componente
 interface Props{
     image?: string;
+    title?: string;
     content?: string;
+    index?: number;
 }
 
-//Extraemos el dato title y content de la respuesta y si no ahy, que muestre por defecto los valores 
-const {image, content = "Contenido_por_defecto"} = Astro.props 
+//Extraemos el dato title y content de la respuesta y si no ahy, que muestre por defecto los valores
+const {image, title = "Título_por_defecto", content = "Contenido_por_defecto", index = 0} = Astro.props
 ---
 
-<div class="text-white rounded-lg flex flex-col items-center">
-    <img src={image} alt="" class="pb-2 drop-shadow-[2px_2px_4px_red] w-20" />
-    <p class="bg-red-900 rounded-2xl p-2 text-center hover:to-red-700 transition-all duration-300 ease-in-out transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1">{content}</p>
-</div>
-
+<article data-aos="fade-up" data-aos-delay={index * 100} class="group relative overflow-hidden rounded-lg bg-ink-800 border border-white/5 hover:border-brand/40 transition-colors duration-300">
+    <div class="aspect-[4/3] overflow-hidden bg-white">
+        <img src={image} alt={title} loading="lazy" class="w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-105" />
+    </div>
+    <div class="p-6">
+        <span class="font-display text-sm text-brand font-semibold tracking-widest">0{index + 1}</span>
+        <h3 class="font-display uppercase text-2xl font-bold text-white mt-1">{title}</h3>
+        <p class="text-sm text-zinc-400 mt-2 leading-relaxed">{content}</p>
+    </div>
+    <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-brand transition-all duration-500 group-hover:w-full"></span>
+</article>

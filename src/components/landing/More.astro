@@ -1,28 +1,49 @@
 ---
 import Card from "../Card.astro";
-import Puerta from "../../../public/images/puerta.jpg";
-import Lanfor from "../../../public/images/lanfor.jpg";
-import Andamio from "../../../public/images/andamio.avif";
-import Porton from "../../../public/images/porton.jpg";
-import Muestra_lanfords from "../../../public/images/muestra_lanford.gif"
+
+const services = [
+    { image: "/images/puerta.jpg", title: "Puertas", content: "Puertas de acero para viviendas y locales, fabricadas a medida con acabados duraderos." },
+    { image: "/images/porton.jpg", title: "Portones", content: "Portones residenciales y automáticos que combinan seguridad y diseño." },
+    { image: "/images/lanfor.jpg", title: "Lanford", content: "Cortinas metálicas enrollables para garajes y locales comerciales." },
+    { image: "/images/andamio.avif", title: "Andamios", content: "Alquiler de andamios certificados para obras de cualquier escala." },
+];
 ---
 
-<section data-aos="zoom-in" class="flex flex-col py-10 md:flex-row md:p-20 gapy-10 gap-x-4">
-    <div class="flex-1 grid grid-cols-2 gap-4">
-        <Card image={Puerta.src} content="Puertas"/>
-        <Card image={Porton.src} content="Portones"/>
-        <Card image={Lanfor.src} content="Lanfor"/>
-        <Card image={Andamio.src} content="Andamios"/>
+<div class="bg-ink-950 py-24 md:py-32">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-end mb-16">
+            <div data-aos="fade-up">
+                <span class="eyebrow">Servicios</span>
+                <h2 class="font-display uppercase text-4xl md:text-6xl font-bold text-white mt-4 leading-none">
+                    Soluciones metálicas<br />de principio a fin
+                </h2>
+            </div>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-zinc-400 text-lg leading-relaxed lg:max-w-md lg:justify-self-end">
+                Diseñamos, fabricamos e instalamos cada producto en nuestro taller, con control de calidad en cada etapa y asesoría personalizada.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+                <Card image={service.image} title={service.title} content={service.content} index={index} />
+            ))}
+        </div>
+
+        <!-- Muestra en movimiento -->
+        <div data-aos="fade-up" class="mt-16 grid md:grid-cols-5 rounded-lg overflow-hidden border border-white/5 bg-ink-800">
+            <div class="md:col-span-2 aspect-video md:aspect-auto md:h-[380px]">
+                <video src="/videos/muestra-lanford.mp4" poster="/videos/muestra-lanford.jpg" autoplay muted loop playsinline preload="none" aria-label="Muestra de lanford en funcionamiento" class="w-full h-full object-cover"></video>
+            </div>
+            <div class="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
+                <span class="eyebrow">Lanford en acción</span>
+                <h3 class="font-display uppercase text-3xl md:text-4xl font-bold text-white mt-4">Apertura suave, cierre seguro</h3>
+                <p class="text-zinc-400 mt-4 leading-relaxed max-w-xl">
+                    Nuestras cortinas enrollables se instalan con mecanismos de apertura silenciosa y pueden automatizarse con control remoto.
+                </p>
+                <a href="#modelos" class="mt-6 inline-flex items-center gap-2 text-white font-semibold hover:text-brand-light transition-colors">
+                    Explorar modelos <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
     </div>
-    <div data-aos="flip-right" class="flex flex-1 flex-col gap-y-10 text-center pt-5">
-        <h2 class="text-2xl md:text-6xl font-bold">Nuestros Servicios</h2>
-        <p class="text-1xl text-zinc-300">Tenemos varios productos que ofrecemos a nuestros clientes</p>
-        
-    </div>
-    <div data-aos="fade-up-left" class="flex flex-1 flex-col gap-y-10 text-center pt-5 mx-auto">
-        <a href={Muestra_lanfords.src} target="_blank" rel="noopener noreferrer">
-            <img src={Muestra_lanfords.src} alt="Muestra Lanford" class="h-80" />
-        </a>
-    </div>
-    
-</section>
+</div>

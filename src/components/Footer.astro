@@ -1,27 +1,68 @@
-<footer data-aos="flip-right" class="bg-red-900 text-white py-10 rounded-xl mt-4">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-6">
-      <!-- Información de contacto -->
-      <div class="text-center md:text-left space-y-2">
-        <h4 class="text-2xl font-semibold">Metálicas Oriental</h4>
-        <p class="flex items-center justify-center md:justify-start gap-2">
-          <i class="fa-solid fa-envelope"></i> metalicasroiental2015@gmail.com
-        </p>
-        <p class="flex items-center justify-center md:justify-start gap-2">
-          <i class="fa-solid fa-phone"></i> 02 3074516
-        </p>
-        <p class="flex items-center justify-center md:justify-start gap-2">
-          <i class="fa-solid fa-mobile-screen-button"></i> 0991621748
+---
+const year = new Date().getFullYear();
+
+const links = [
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#modelos', label: 'Modelos' },
+    { href: '#about', label: 'Nosotros' },
+    { href: '#project', label: 'Proyectos' },
+    { href: '#contactos', label: 'Contacto' },
+];
+---
+
+<footer class="bg-ink-900 border-t border-white/5 text-zinc-400">
+    <div class="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
+      <!-- Marca -->
+      <div>
+        <span class="inline-block bg-white rounded-md px-3 py-2">
+          <img src="/images/logo-metalicas-oriental.png" alt="Metálicas Oriental" class="h-10 w-auto" />
+        </span>
+        <p class="mt-5 text-sm leading-relaxed max-w-xs">
+          Fabricación e instalación de puertas de acero, portones y lanfords. Alquiler de andamios.
         </p>
       </div>
-  
-      <!-- Información del desarrollador -->
-      <div class="text-center md:text-right space-y-2">
-        <h4 class="text-2xl font-semibold">Desarrollado por</h4>
-        <a href="https://www.linkedin.com/in/luis-alexander-soto-segovia-548322307/" 
-           class="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-200">
-          <i class="fa-solid fa-laptop-code"></i> Alexander Soto
+
+      <!-- Navegación -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-white mb-5">Navegación</h4>
+        <ul class="space-y-3 text-sm">
+          {links.map(link => (
+            <li><a href={link.href} class="hover:text-white transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-widest text-white mb-5">Contacto</h4>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="mailto:metalicasoriental2015@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors">
+              <i class="fa-solid fa-envelope text-brand w-4"></i> metalicasoriental2015@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+59323074516" class="flex items-center gap-3 hover:text-white transition-colors">
+              <i class="fa-solid fa-phone text-brand w-4"></i> 02 3074516
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/593991621748" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-white transition-colors">
+              <i class="fa-solid fa-mobile-screen-button text-brand w-4"></i> 099 162 1748
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Información del desarrollador -->
+    <div class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row gap-3 justify-between items-center text-xs text-zinc-500">
+        <p>© {year} Metálicas Oriental. Todos los derechos reservados.</p>
+        <a href="https://www.linkedin.com/in/luis-alexander-soto-segovia-548322307/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 hover:text-white transition-colors">
+          <i class="fa-solid fa-laptop-code"></i> Desarrollado por Alexander Soto
         </a>
       </div>
     </div>
-  </footer>
-  
+</footer>

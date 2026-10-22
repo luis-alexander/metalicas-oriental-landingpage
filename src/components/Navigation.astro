@@ -1,56 +1,90 @@
 ---
 const links=[
-    { href: '/', label: 'Inicio' },
+    { href: '#inicio', label: 'Inicio' },
     { href: '#servicios', label: 'Servicios'},
     { href: '#modelos', label: 'Modelos'},
-    { href: '#about', label: 'Sobre Nosotros'},
+    { href: '#about', label: 'Nosotros'},
     { href: '#project', label: 'Proyectos'},
-    { href: '#contactos', label: 'Contactos'}
+    { href: '#contactos', label: 'Contacto'}
 ]
 ---
 
 <div>
-  <!-- Navbar con boton hamburguesa -->
-  <div class="bg-[#202020] py-3 fixed top-0 left-0 right-0 shadow-md z-50">
-    <button id="menu-btn" class="ml-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
+  <!-- Barra superior -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
+    <nav class="mx-auto max-w-7xl px-6 h-[72px] flex items-center justify-between">
+      <a href="#inicio" class="flex items-center">
+        <span class="bg-white rounded-md px-2 py-1">
+          <img src="/images/logo-metalicas-oriental.png" alt="Metálicas Oriental" class="h-8 w-auto" />
+        </span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-8">
+        {links.map(link => (
+          <li>
+            <a href={link.href} class="relative text-sm font-medium text-zinc-300 hover:text-white transition-colors after:absolute after:left-0 after:-bottom-1.5 after:h-0.5 after:w-0 after:bg-brand after:transition-all hover:after:w-full">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/593991621748" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-4 py-2.5 rounded-md transition-colors">
+          <i class="fa-brands fa-whatsapp"></i> Cotizar ahora
+        </a>
+        <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
 
   <!-- Fondo oscuro cuando el menú está abierto -->
-  <div id="overlay" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"></div>
+  <div id="overlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50"></div>
 
-  <!-- Sidebar -->
-  <aside id="sidebar" class="fixed top-0 left-0 bg-[#202020]  min-h-screen sidebar-closed overflow-hidden transition-all duration-300 z-50">
-    <div class="pt-3">
-      <button id="close-btn" class="ml-4 text-white mb-14">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+  <!-- Sidebar (móvil) -->
+  <aside id="sidebar" class="fixed top-0 right-0 bg-ink-900 border-l border-white/5 min-h-screen sidebar-closed overflow-hidden transition-all duration-300 z-50">
+    <div class="w-[300px] p-6">
+      <div class="flex items-center justify-between mb-10">
+        <span class="font-display text-xl font-semibold uppercase tracking-wider text-white">Menú</span>
+        <button id="close-btn" class="text-white p-2" aria-label="Cerrar menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
-      <div class="space-y-2 px-4">
+      <div class="space-y-1">
         {links.map(link => (
-          <a href={link.href} class="flex items-center gap-2 text-white text-lg hover:bg-[#ef4444] px-4 py-2 rounded transition-all">
+          <a href={link.href} class="sidebar-link flex items-center justify-between text-zinc-200 text-lg px-4 py-3 rounded-md hover:bg-white/5 hover:text-white transition-all">
             <span>{link.label}</span>
+            <i class="fa-solid fa-chevron-right text-xs text-brand"></i>
           </a>
         ))}
       </div>
+
+      <a href="https://wa.me/593991621748" target="_blank" rel="noopener noreferrer" class="mt-10 flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-4 py-3 rounded-md transition-colors">
+        <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+      </a>
     </div>
   </aside>
-
-  
 </div>
 <!-- Importacion de script para el menu de navegacion -->
 <script type="module" src="/js/navigation.js"></script>
 
 <style>
   .sidebar-open {
-    width: 320px;
+    width: 300px;
   }
   .sidebar-closed {
     width: 0;
+  }
+  #navbar.scrolled {
+    background-color: rgba(11, 12, 14, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 </style>

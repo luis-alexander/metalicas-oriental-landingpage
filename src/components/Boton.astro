@@ -1,19 +1,27 @@
 ---
-//Datos para cada componente 
+//Datos para cada componente
 interface Props {
   title?: string;
   link?: string;
+  variant?: "primary" | "outline";
+  icon?: string;
+  external?: boolean;
 }
 
-//Extraemos el dato title y content de la respuesta y si no hay, que muestre por defecto los valores 
-const { title = "Título por defecto" , link = "#"} = Astro.props;
+//Extraemos el dato title y content de la respuesta y si no hay, que muestre por defecto los valores
+const { title = "Título por defecto" , link = "#", variant = "primary", icon, external = false } = Astro.props;
+
+const styles = {
+  primary: "bg-brand hover:bg-brand-dark text-white shadow-lg shadow-brand/25",
+  outline: "border border-white/25 text-white hover:bg-white hover:text-ink-950",
+};
 ---
 
 <a href={link}
-  type="button" 
-  class="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-5 py-2 rounded-2xl shadow-md hover:from-red-600 hover:to-red-700 transition-all duration-300 ease-in-out transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1"
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  class={`inline-flex items-center justify-center gap-2 font-semibold px-6 py-3.5 rounded-md transition-all duration-300 ${styles[variant]}`}
 >
+  {icon && <i class={icon}></i>}
   {title}
 </a>
-
-

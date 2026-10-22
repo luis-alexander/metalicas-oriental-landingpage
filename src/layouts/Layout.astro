@@ -1,6 +1,5 @@
 ---
 import Footer from '../components/Footer.astro';
-import Hero from '../components/landing/Hero.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import "aos/dist/aos.css";
 interface Props{
@@ -12,28 +11,28 @@ const { title } = Astro.props;
 <script>
   	// Importar AOS
 	import AOS from "aos";
-	AOS.init({ duration: 1000, once: false });
+	AOS.init({ duration: 800, once: true, easing: "ease-out-cubic", offset: 60 });
 </script>
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Metálicas Oriental: fabricación e instalación de puertas de acero, portones, lanfords y alquiler de andamios en Quito y alrededores. Más de 15 años de experiencia." />
+		<meta name="theme-color" content="#0b0c0e" />
 		<link rel="icon" href="/images/logo-metalicas-oriental-icono.jpg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		
-		<title>Metalicas Oriental - {title}</title>
+		<title>Metálicas Oriental - {title}</title>
 	</head>
-	<body>
-		<main class="mx-auto container px-6 md:pt-10 overflow-hidden">
-			<Hero />
-			<slot />
-		</main>
+	<body class="font-sans">
+		<slot />
 		<WhatsAppButton />
 		<Footer />
 	</body>
 </html>
-
-

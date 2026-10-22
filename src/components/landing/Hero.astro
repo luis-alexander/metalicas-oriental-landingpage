@@ -1,41 +1,76 @@
 ---
 import Boton from "../Boton.astro";
+
+const stats = [
+  { value: "15+", label: "Años de experiencia" },
+  { value: "5", label: "Ciudades atendidas" },
+  { value: "100%", label: "Fabricación propia" },
+];
 ---
 
-<header class="relative overflow-hidden rounded-xl min-h-screen flex items-center">
-  <div 
-    class="absolute inset-0 -z-10 bg-cover bg-center opacity-30"
-    style="background-image: url('/img/video_principal.gif')">
-  </div>
+<header class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Fondo -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    src="/videos/hero.mp4"
+    poster="/videos/hero.jpg"
+    autoplay muted loop playsinline preload="metadata"
+    aria-hidden="true">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30"></div>
 
-  <div class="bg-zinc-700/20 w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16 gap-10 text-center md:text-left rounded-xl">
-    
-    <div data-aos="fade-right" class="w-full md:w-1/2">
-      <h1 class="text-4xl md:text-6xl font-bold text-red-500 pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
-        Metálicas Oriental
-      </h1>
+  <div class="relative w-full mx-auto max-w-7xl px-6 pt-32 pb-24">
+    <div data-aos="fade-up" class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-red-600">
+      <span class="h-0.5 w-8 bg-red-600"></span>
+      La puerta genuina
+    </span>
 
-      <p class="my-4 text-lg md:text-2xl text-justify text-white pb-2 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
-        Somos una empresa dedicada a la fabricación de puertas de Acero, alquilamos andamios e instalamos diferentes tipos de productos. Bienvenido/a a nuestra página web, donde podrás encontrar todo lo que necesitas para tus proyectos.
-      </p>
+    <h1 class="font-display uppercase font-bold text-white leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-5xl mt-6">
+      Seguridad en acero,<br />
+      <span class="text-red-600">hecha a su medida.</span>
+    </h1>
 
-      <div class="flex flex-wrap justify-center md:justify-start gap-4">
-        <Boton title="Servicios" link="#servicios"/>
-        <Boton title="Modelos" link="#modelos"/>
-        <Boton title="Nosotros" link="#about"/>
-        <Boton title="Proyectos" link="#project"/>
-        <Boton title="Contactos" link="#contactos"/>
-      </div>
+    <p class="mt-8 text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl">
+      Fabricamos puertas de acero, portones y lanfords, instalamos cada proyecto con nuestro propio equipo y alquilamos andamios para su obra.
+    </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+      <a
+        href="https://wa.me/593991621748"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 rounded-lg bg-red-600 px-7 py-4 font-semibold text-white transition hover:bg-red-700"
+      >
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        Solicitar cotización
+      </a>
+
+      <a
+        href="#modelos"
+        class="inline-flex items-center gap-3 rounded-lg border-2 border-white bg-black px-7 py-4 font-semibold text-white transition hover:bg-white hover:text-black"
+      >
+        Ver modelos
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
     </div>
 
-    <div data-aos="fade-left" class="w-full md:w-1/2 flex items-center justify-center">
-      <img 
-        src="/images/logo-metalicas-oriental-icono.jpg" 
-        alt="Icono" 
-        class="w-64 md:w-80 max-w-full rounded-3xl p-1 bg-gradient-to-r from-red-500 via-yellow-500 to-red-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-1"
-      />
+    <!-- Cifras -->
+    <div data-aos="fade-up" data-aos-delay="200" class="mt-20 grid grid-cols-3 gap-4 max-w-2xl">
+      {stats.map((stat) => (
+        <div class="rounded-lg bg-black border-l-4 border-red-600 p-4">
+          <p class="font-display text-4xl md:text-5xl font-bold text-white">{stat.value}</p>
+          <p class="text-xs sm:text-sm text-zinc-300 mt-1">{stat.label}</p>
+        </div>
+      ))}
     </div>
-
   </div>
+
+  <a href="#servicios" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500 hover:text-white transition-colors animate-bounce" aria-label="Ir a servicios">
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
 </header>
 <script type="module" src="/js/scroll-hero.js"></script>

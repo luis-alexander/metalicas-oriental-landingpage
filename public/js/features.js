@@ -8,11 +8,11 @@ const modeloItems = document.querySelectorAll('.modelo-item');
 function setActiveButton(activeBtn) {
     // Eliminar la clase 'active' de todos los botones
     [btnTodos, btnPuertas, btnPortones, btnLanford].forEach(btn => {
-        btn.classList.remove('bg-red-900');
+        btn.classList.remove('active');
     });
     
     // Añadir la clase 'active' al botón seleccionado
-    activeBtn.classList.add('bg-red-900');
+    activeBtn.classList.add('active');
 }
 
 // Función para filtrar los elementos

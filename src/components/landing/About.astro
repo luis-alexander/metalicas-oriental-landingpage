@@ -1,12 +1,57 @@
-<section class="bg-zinc-900 p-20 rounded-xl my-4">
-    <h2 data-aos="zoom-in-right" class="text-5xl font-bold my-5 text-red-500">Sobre Metálicas Oriental</h2>
-    <p data-aos="zoom-in-right" class="text-zinc-300 text-xl md:text-2xl text-justify">Llevamos más de 15 años creando productos e instalando en diferentes ubicaciones. Nuestro compromiso es brindar la mejor calidad y servicio a nuestros clientes. Nuestros trabajos han tenido luegar en diferentes ubicaciones, como:</p>
-    <div data-aos="zoom-out-down" class="flex flex-col text-center items-center justify-center md:flex-row gap-4 mt-10">
-        <h3 class="font-bold">Quito</h3>
-        <h3 class="font-bold">Latacunga</h3>
-        <h3 class="font-bold">Sigchos</h3>
-        <h3 class="font-bold">Machachi</h3>
-        <h3 class="font-bold">Tambillo</h3>
+---
+const ciudades = ["Quito", "Latacunga", "Sigchos", "Machachi", "Tambillo"];
+
+const valores = [
+    { icon: "fa-solid fa-shield-halved", title: "Calidad garantizada", text: "Materiales de alta resistencia y acabados de primera." },
+    { icon: "fa-solid fa-ruler-combined", title: "Hecho a medida", text: "Cada pieza se adapta a su fachada y necesidades." },
+    { icon: "fa-solid fa-screwdriver-wrench", title: "Instalación propia", text: "Nuestro equipo instala y da seguimiento a cada obra." },
+];
+---
+
+<div class="bg-ink-950 py-24 md:py-32">
+    <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+            <span class="eyebrow">Sobre nosotros</span>
+            <h2 class="font-display uppercase text-4xl md:text-6xl font-bold text-white mt-4 leading-none">
+                Más de 15 años<br />construyendo confianza
+            </h2>
+            <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+                En Metálicas Oriental fabricamos e instalamos productos metálicos con un compromiso claro: brindar la mejor calidad y servicio a nuestros clientes. Hemos llevado nuestro trabajo a hogares, comercios y obras en distintas ciudades del país.
+            </p>
+
+            <div class="mt-8">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-3">Presencia en</p>
+                <ul class="flex flex-wrap gap-2">
+                    {ciudades.map((ciudad) => (
+                        <li class="flex items-center gap-2 text-sm text-zinc-200 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+                            <i class="fa-solid fa-location-dot text-brand text-xs"></i>{ciudad}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div class="mt-10 grid sm:grid-cols-3 gap-6">
+                {valores.map((valor) => (
+                    <div>
+                        <div class="w-11 h-11 rounded-md bg-brand/10 text-brand flex items-center justify-center">
+                            <i class={valor.icon}></i>
+                        </div>
+                        <h3 class="font-semibold text-white mt-4">{valor.title}</h3>
+                        <p class="text-sm text-zinc-400 mt-1">{valor.text}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div data-aos="fade-left" class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-brand/20 to-transparent rounded-2xl blur-2xl"></div>
+            <div class="relative bg-white rounded-xl p-10 md:p-14 shadow-2xl">
+                <img src="/images/logo-metalicas-oriental.png" alt="Metálicas Oriental - La puerta genuina" class="w-full max-w-md mx-auto" />
+            </div>
+            <div class="relative -mt-8 ml-8 mr-8 md:mr-auto md:max-w-xs bg-ink-800 border border-white/10 rounded-lg p-6 shadow-xl">
+                <p class="font-display text-5xl font-bold text-white">15<span class="text-brand">+</span></p>
+                <p class="text-sm text-zinc-400 mt-1">años fabricando la puerta genuina</p>
+            </div>
+        </div>
     </div>
-    <img src="/images/logo-metalicas-oriental.png" alt="Metalicas Oriental" class="w-80 rounded-3xl p-1  hover:scale-105 hover:shadow-2xl hover:rotate-1 mt-10 mx-auto"/>
-</section>
+</div>
